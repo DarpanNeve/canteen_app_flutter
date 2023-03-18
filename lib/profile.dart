@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'auth_service.dart';
+
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
@@ -8,14 +9,20 @@ class ProfilePage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text("Places"),
-          toolbarOpacity: double.minPositive,
+          title: const Text("Data"),
+          actions: <Widget>[
+            Text("Data"),
+            IconButton(
+              onPressed:null,
+              icon: Icon(Icons.adb_rounded),
+            )
+          ],
         ),
         body: Center(
           child: Column(
             children: <Widget>[
               const SignOutButton(),
-              SelectableText( snapshot1),
+              SelectableText(snapshot1),
             ],
           ),
         ),
