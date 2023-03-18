@@ -15,7 +15,7 @@ class ProfilePage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               const SignOutButton(),
-              Text(snapshot1),
+              SelectableText( snapshot1),
             ],
           ),
         ),
