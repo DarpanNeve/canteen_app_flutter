@@ -1,7 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'auth_service.dart';
-
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
@@ -11,11 +9,12 @@ class ProfilePage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: const Text("Places"),
+          toolbarOpacity: double.minPositive,
         ),
         body: Center(
           child: Column(
             children: <Widget>[
-              SignOutButton(),
+              const SignOutButton(),
               Text(snapshot1),
             ],
           ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
 import 'auth_service.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 
 
@@ -24,7 +26,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.indigo,
         body:
         Center(
           child: Column(
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
               ),
               const Image(
                 width: 200,
-                image: AssetImage('assets/images/collegelogo.png'),
+                image: AssetImage('assets/images/college_logo.png'),
               ),
               const SizedBox(
                 height: 25,
@@ -71,7 +72,7 @@ class MyApp extends StatelessWidget {
                   const MyApp();
                 },
                 child: Image.asset(
-                  'assets/images/googlelogo.png',
+                  'assets/images/google_logo.png',
                   fit: BoxFit.cover,
                   width: 50,
                 ),
@@ -100,6 +101,7 @@ class _SignInState extends State<SignIn> {
       child: const ElevatedButton(
         onPressed: null,
         child: Text("Login"),
+
       ),
     );
   }
