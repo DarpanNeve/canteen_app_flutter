@@ -11,11 +11,10 @@ class ProfilePage extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Data"),
           actions: <Widget>[
-            Text("Data"),
-            IconButton(
-              onPressed:null,
-              icon: Icon(Icons.adb_rounded),
-            )
+          IconButton(
+            onPressed:(){ AuthService().signOut();},
+            icon: const Icon(Icons.adb_rounded),
+          )
           ],
         ),
         body: Center(
@@ -25,8 +24,10 @@ class ProfilePage extends StatelessWidget {
               SelectableText(snapshot1),
             ],
           ),
-        ),
-      ),
+        )
+        ,
+      )
+      ,
     );
   }
 }
@@ -45,3 +46,14 @@ class SignOutButton extends StatelessWidget {
     );
   }
 }
+
+//lass AppbarSignout extends StatelessWidget{
+// const AppbarSignout({super.key});
+//
+// @override
+// Widget build(BuildContext context) {
+//   return IconButton(
+//     onPressed:null,
+//     icon: const Icon(Icons.adb_rounded),
+//   );
+// }
