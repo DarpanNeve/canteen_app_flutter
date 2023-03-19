@@ -5,7 +5,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'main.dart';
 import 'profile.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-late String snapshot1 ;
+late String snapshot1;
 class AuthService {
   handleAuthState() {
     return StreamBuilder(
@@ -13,10 +13,10 @@ class AuthService {
         builder: (BuildContext context, snapshot) {
           if (snapshot.hasData) {
             Fluttertoast.showToast(
-              msg: snapshot.data.toString(),
+              msg: "Login Successful",
               toastLength: Toast.LENGTH_LONG,
               textColor: Colors.black,
-              fontSize: 16,
+              fontSize: 20,
               backgroundColor: Colors.grey[200],
             );
             snapshot1=snapshot.data.toString();
