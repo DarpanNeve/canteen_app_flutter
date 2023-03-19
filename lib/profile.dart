@@ -34,6 +34,21 @@ class ProfilePage extends StatelessWidget {
               ),
               Text(Email!),
               SelectableText(snapshot1),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Column(
+                    children: const <Widget>[
+                      Text("Name"),
+                      Text("Email"),
+                      Text("Roll no."),
+                      Text("PRN"),
+                      Text("Division"),
+                      Text("Batch"),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
         ),

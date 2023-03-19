@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'main.dart';
-import 'profile.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'new_profile.dart';
 late String snapshot1;
 class AuthService {
   handleAuthState() {
@@ -20,7 +20,7 @@ class AuthService {
               backgroundColor: Colors.grey[200],
             );
             snapshot1=snapshot.data.toString();
-            return const ProfilePage();
+            return  const OptionMenuPage(studentDept: "ENTC", studentRollNo: "SYETB127", studentName: "Darpan", studentYear: 2023);
           } else {
             return const MyApp();
           }
