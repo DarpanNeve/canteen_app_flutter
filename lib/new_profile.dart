@@ -1,17 +1,13 @@
+import 'package:canteen_app/auth_service.dart';
 import 'package:flutter/material.dart';
 
 class OptionMenuPage extends StatelessWidget {
-  final String studentName;
-  final String studentDept;
-  final String studentRollNo;
-  final int studentYear;
+  final String studentName="Darpan";
+  final String studentDept="ENTC";
+  final String studentRollNo="121B1E127";
+  final int studentYear=2023;
 
-  const OptionMenuPage(
-      {super.key,
-      required this.studentDept,
-      required this.studentRollNo,
-      required this.studentName,
-      required this.studentYear});
+  const OptionMenuPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -57,11 +53,14 @@ class OptionMenuPage extends StatelessWidget {
         centerTitle: true,
         title: const Text("Dashboard", style: TextStyle(color: Colors.black)),
         backgroundColor: Colors.transparent,
-        actions: const [
+        actions: [
           Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Icon(
-              Icons.notifications_none_rounded,
+            padding: const EdgeInsets.all(8.0),
+            child: IconButton(
+              onPressed: (){
+                AuthService().signOut();
+              },
+              icon:const Icon(Icons.notifications_none_rounded),
               color: Colors.black,
             ),
           )

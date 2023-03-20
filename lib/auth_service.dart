@@ -20,7 +20,7 @@ class AuthService {
               backgroundColor: Colors.grey[200],
             );
             snapshot1=snapshot.data.toString();
-            return  const OptionMenuPage(studentDept: "ENTC", studentRollNo: "SYETB127", studentName: "Darpan", studentYear: 2023);
+            return  OptionMenuPage();
           } else {
             return const MyApp();
           }
